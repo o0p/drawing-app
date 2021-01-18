@@ -17,13 +17,28 @@ body {
 }
 
 canvas {
-    border: 2px solid steelblue;
+    border: 0.125rem solid steelblue;
 }
 
 .toolbox {
     background-color: steelblue;
-    border: 1px solid slateblue;
+    border: 0.0625rem solid slateblue;
     display: flex;
-    width: 804px;
+    width: 50.25rem;
     padding: 1rem;
+}
+
+.toolbox > * {
+    background-color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 0.1875rem;
+
 }

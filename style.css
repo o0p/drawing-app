@@ -42,3 +42,7 @@ canvas {
     border-radius: 0.1875rem;
 
 }
+
+.toolbox > *:last-child {
+    margin-left: auto;
+}

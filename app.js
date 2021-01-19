@@ -6,6 +6,12 @@ let color = 'black';
 let x;
 let y;
 
+canvas.addEventListener('mouseup', function (event) {
+    isPressed = flase;
+    x = undefined;
+    x = undefined;
+});
+
 canvas.addEventListener('mousedown', function (event) {
     isPressed = true;
     x = event.offsetX;

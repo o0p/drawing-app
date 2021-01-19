@@ -7,22 +7,25 @@ let x;
 let y;
 
 canvas.addEventListener('mouseup', function (event) {
-    isPressed = flase;
+    isPressed = false;
     x = undefined;
-    x = undefined;
+    y = undefined;
+    console.log(isPressed)
 });
 
 canvas.addEventListener('mousemove', function (event) {
     if (isPressed) {
         const x2 = event.offsetX;
         const y2 = event.offsetY;
+        drawCircle(x2, y2);
+        drawLine(x, y, x2, y2);
     }
 });
 
 canvas.addEventListener('mousedown', function (event) {
     isPressed = true;
     x = event.offsetX;
-    x = event.offsetY;
+    y = event.offsetY;
 });
 
 function drawCircle(x, y) {
@@ -34,7 +37,7 @@ function drawCircle(x, y) {
 
 function drawLine(x1, y1, x2, y2) {
     ctx.beginPath();
-    ctx.moveTo(x1, y2);
+    ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
     ctx.strkeStyle = color;
     ctx.lineWidth = size;

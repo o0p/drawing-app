@@ -9,6 +9,16 @@ function drawCircle(x, y) {
     ctx.arc(x, y, size, 0, Math.PI * 2);
     ctx.fillStyle = color;
     ctx.fill();
-}
+};
+
+function drawLine(x1, y1, x2, y2) {
+    ctx.beginPath();
+    ctx.moveTo(x1, x2);
+    ctx.lineTo(x2, y2);
+    ctx.strkeStyle = color;
+    ctx.lineWidth = size;
+    ctx.stroke();
+};
 
 drawCircle(100, 200);
+drawLine(300, 300, 300, 500);

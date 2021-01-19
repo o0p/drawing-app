@@ -68,9 +68,8 @@ decreaseBtn.addEventListener('click', function() {
     updateSizeOnScreen();
 });
 
-
-
 function updateSizeOnScreen() {
+    sizeEl.innerText = size;
+};
 
-    sizeEl.innerHTML = size;
-}
+clearEl.addEventListener('click', () => ctx.clearRect(0,0, canvas.width, canvas.height))

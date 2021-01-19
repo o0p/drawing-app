@@ -1,8 +1,16 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let size = 20;
+let isPressed = false;
 let color = 'black';
+let x;
+let y;
 
+canvas.addEventListener('mousedown', function (event) {
+    isPressed = true;
+    x = event.offsetX;
+    x = event.offsetY;
+});
 
 function drawCircle(x, y) {
     ctx.beginPath();
@@ -13,12 +21,10 @@ function drawCircle(x, y) {
 
 function drawLine(x1, y1, x2, y2) {
     ctx.beginPath();
-    ctx.moveTo(x1, x2);
+    ctx.moveTo(x1, y2);
     ctx.lineTo(x2, y2);
     ctx.strkeStyle = color;
     ctx.lineWidth = size;
     ctx.stroke();
 };
 
-drawCircle(100, 200);
-drawLine(300, 300, 300, 500);
